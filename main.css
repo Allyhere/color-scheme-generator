@@ -250,6 +250,10 @@ footer p{
     font-size: 1em;
 }
 
+footer a{
+    color: var(--secondary);
+}
+
 @media (max-width: 1086px){
     form{
         margin-top: 15px;
