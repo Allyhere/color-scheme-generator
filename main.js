@@ -6,26 +6,31 @@
 const btnColor = document.getElementById('btnColor');
 const corContainer = document.querySelectorAll('.color__container');
 const nomeCorContainer = document.querySelectorAll('.color__name');
+const formData = document.querySelectorAll('form input');
+let mode = 'monochrome';
+
+formData.forEach(el => {
+    el.addEventListener('click',function(){
+        mode = this.id;
+    })
+})
 
 function fetchColor(){
     let randomColor = Math.floor(Math.random()*16777215).toString(16);
 
-    fetch(`https://www.thecolorapi.com/scheme?hex=${randomColor}&mode=analogic&count=5`)
+    fetch(`https://www.thecolorapi.com/scheme?hex=${randomColor}&mode=${mode}&count=6`)
     .then(res => res.json())
     .then(json =>{
-        console.log(json);
         assignColor(json.colors);
     })
 }
 
 function assignColor(obj){
     obj.forEach((el, ind)=>{
-       // console.log(el.hex.value, ind);
         corContainer[ind].style.background = el.hex.value;
         nomeCorContainer[ind].innerHTML = el.hex.value;
     });
 
-    //console.log(obj[0].hex.value)
 }
 
 btnColor.addEventListener('click', function(){

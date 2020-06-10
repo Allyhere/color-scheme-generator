@@ -1,27 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="main.css">
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css" />
     <script src="main.js" defer></script>
     <title>Random Color Scheme Generator</title>
-</head>
-<body>
+  </head>
+  <body>
     <main class="container">
-        <h1 class="title">Random Color Scheme Generator</h1>
-        <p>Click to generate color schemes!</p>
+      <h1 class="title">Random Color Scheme Generator</h1>
+      <p>Click to generate color schemes!</p>
+      <div class="opt">
         <button id="btnColor"><p>Generate</p></button>
-        <ul class="color">
-            <li class="color__container"><p class="color__name">#000000</p></li>
-            <li class="color__container"><p class="color__name">#000000</p></li>
-            <li class="color__container"><p class="color__name">#000000</p></li>
-            <li class="color__container"><p class="color__name">#000000</p></li>
-            <li class="color__container"><p class="color__name">#000000</p></li>
-        </ul>
+        <form action="#" id="form">
+            <p>
+              <input type="radio" id="monochrome" name="radio-group" checked>
+              <label for="monochrome">monochrome</label>
+            </p>
+            <p>
+              <input type="radio" id="analogic" name="radio-group">
+              <label for="analogic">analogic</label>
+            </p>
+            <p>
+              <input type="radio" id="complement" name="radio-group">
+              <label for="complement">complement</label>
+            </p>
+              <p>
+              <input type="radio" id="triad" name="radio-group">
+              <label for="triad">triad</label>
+            </p>
+          </form>
+      </div>
+      <ul class="color">
+        <li class="color__container"><p class="color__name">#000000</p></li>
+        <li class="color__container"><p class="color__name">#000000</p></li>
+        <li class="color__container"><p class="color__name">#000000</p></li>
+        <li class="color__container"><p class="color__name">#000000</p></li>
+        <li class="color__container"><p class="color__name">#000000</p></li>
+        <li class="color__container"><p class="color__name">#000000</p></li>
+      </ul>
     </main>
     <footer>
-        <p>Desenvolvido por Camilo e Filipe</p>
+      <p>Desenvolvido por Camilo e Filipe</p>
     </footer>
-</body>
+  </body>
 </html>
